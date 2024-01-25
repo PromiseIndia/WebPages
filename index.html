@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Scrolling Images</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #slider {
+            width: 100%;
+            height: 400px; /* Set a fixed height for the slider */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        #image-container {
+            display: flex;
+            width: 600%; /* Set to 100% * number of slides */
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        #content {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="slider">
+    <div id="image-container">
+        <div class="slide"><img src="https://picsum.photos/id/1015/1600/900" alt="Image 1"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1016/1600/900" alt="Image 2"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1018/1600/900" alt="Image 3"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1019/1600/900" alt="Image 4"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1020/1600/900" alt="Image 5"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1024/1600/900" alt="Image 6"></div>
+    </div>
+</div>
+
+<div id="content">
+    <h1>Main Heading As Per Requirement</h1>
+    <p>This is a description of the main heading. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nulla officiis illo ex labore doloribus ea alias reprehenderit saepe possimus nesciunt beatae eligendi eos, cupiditate, ratione fuga neque laudantium. Ipsa!
+    Dicta saepe iure libero inventore, minus possimus placeat. Placeat accusantium aliquam, natus eum perspiciatis exercitationem eaque neque, animi quasi nesciunt ab earum laboriosam dignissimos incidunt debitis laborum quibusdam ea repellendus?
+    Cum provident odio quas laborum perferendis quaerat totam, vero similique commodi voluptate sunt perspiciatis dolore, excepturi quisquam iste esse, in facilis odit necessitatibus deserunt porro! Nisi ex culpa dolor laudantium!
+    Sint cupiditate vel maxime reiciendis aspernatur pariatur dignissimos ipsa laborum, molestiae, accusamus, quis provident dolorum dolor placeat beatae dolorem enim ipsum similique voluptatibus non maiores at dolore. Animi, similique tempora!
+    Distinctio nostrum vitae repellat, rem id non vel, voluptas maxime placeat reprehenderit reiciendis tempora eveniet omnis fugit laudantium! Molestiae quo, sapiente unde laborum culpa architecto itaque consequatur? Unde, sequi ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quis! Rem soluta velit in pariatur placeat exercitationem, ab repudiandae repellendus laboriosam explicabo inventore vero dolorem, fugit dolores quis. Dolores, distinctio!
+    Itaque quibusdam, hic voluptatem accusantium possimus cupiditate voluptatum est! Consectetur dolores magni atque officiis nam cupiditate maxime facere cum. Eaque iusto blanditiis alias eveniet rem incidunt? Expedita atque autem consequatur.
+    Quidem quam illo dolor iusto quos aliquam asperiores porro accusantium. Minus quam, velit eos iure nesciunt facilis asperiores cupiditate vel quis? Culpa at enim minus, eveniet quod mollitia velit quis!</p>
+</div>
+
+<script>
+    // JavaScript for auto-scrolling images
+    const imageContainer = document.getElementById('image-container');
+
+    setInterval(() => {
+        imageContainer.style.transition = 'transform 0.8s ease-in-out';
+        imageContainer.style.transform = 'translateX(-16.6667%)'; // Move by 100% / number of slides
+        setTimeout(() => {
+            const firstImage = document.querySelector('.slide');
+            imageContainer.style.transition = 'none';
+            imageContainer.style.transform = 'translateX(0)';
+            imageContainer.appendChild(firstImage);
+        }, 800);
+    }, 3000); // Change slide every 3 seconds
+</script>
+
+</body>
+</html>
+1
