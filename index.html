@@ -94,14 +94,68 @@
         .ram-banner img{
             height: 30vh;
         }
+        #testimonials {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonial {
+    /* Existing styles for testimonials */
+    flex: 0 0 auto;
+}
+        .testimonial img {
+            width: 100px; /* Adjust the width as needed */
+            height: 100px; /* Adjust the height as needed */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+
+.testimonial {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: black 20px;
+}
+
+.client-name {
+    font-style: italic;
+    margin-top: 10px;
+}
+
         @media (max-width: 600px) {
             #logo {
-                
+            
                 font-size: 22px; /* Adjust the font size for smaller screens */
                 flex: 9;
                 padding-left: 5px;
+            
+            }
+            #testimonials{
+                flex-direction: column;
                 
             }
+            .testimonial{
+                width: 80%;
+            }
+            
+            .ram-banner{
+            padding-top: 50px;
+            height: 30vh;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+        .ram-banner img{
+            width: 90%;
+            height: 30vh;
+        }
             .social-container{
             display: flex;
             justify-content: space-evenly;
@@ -113,7 +167,7 @@
                 height: 30px;
             }
         }
-        
+
     </style>
 </head>
 <body>
@@ -124,16 +178,16 @@
            <div> <a href="#"><img id="socials" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="fb"></a> </div>
            <div> <a href="#"><img id="socials" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="insta"></a> </div>
            <div> <a href="#"> <img id="socials" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Whatsapp"></a></div>
-        
+
         </div>
-            
+
     </div>
 
-    
+
 <div class="main">
     <div class="ram-banner"><img src="./contents/ram.png" alt="Banner"></div>
     <div id="slider">
-       
+
         <div id="image-container">
             <div class="slide"><img src="https://picsum.photos/id/1015/1600/900" alt="Image 1"></div>
             <div class="slide"><img src="https://picsum.photos/id/1016/1600/900" alt="Image 2"></div>
@@ -194,6 +248,30 @@
         Itaque quibusdam, hic voluptatem accusantium possimus cupiditate voluptatum est! Consectetur dolores magni atque officiis nam cupiditate maxime facere cum. Eaque iusto blanditiis alias eveniet rem incidunt? Expedita atque autem consequatur.
         Quidem quam illo dolor iusto quos aliquam asperiores porro accusantium. Minus quam, velit eos iure nesciunt facilis asperiores cupiditate vel quis? Culpa at enim minus, eveniet quod mollitia velit quis!</p>
     </div>
+    <div><h1 style="display: flex ;  justify-content: center;">Testimonials</h1></div>
+    <div id="testimonials">
+        
+
+        <div class="testimonial">
+            <img src="./contents/ram.png" alt="Client 1">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur congue augue nec leo vestibulum."</p>
+            <p class="client-name">John Doe</p>
+        </div>
+        <div class="testimonial">
+            <img src="./contents/ram.png" alt="Client 1">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur congue augue nec leo vestibulum."</p>
+            <p class="client-name">John Starc</p>
+        </div>
+
+        <div class="testimonial">
+            <img src="./contents/ram.png" alt="Client 2">
+            <p>"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer rutrum ante eu lacus."</p>
+            <p class="client-name">Jane Smith</p>
+        </div>
+
+        <!-- Add more testimonials with images as needed -->
+
+    </div>
 </div>
 
 
@@ -210,7 +288,20 @@
             imageContainer.style.transform = 'translateX(0)';
             imageContainer.appendChild(firstImage);
         }, 800);
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); 
+    
+    // const testimonialsContainer = document.getElementById('testimonials');
+
+    // setInterval(() => {
+    //     const firstTestimonial = testimonialsContainer.firstElementChild;
+    //     testimonialsContainer.style.transition = 'transform 0.8s ease-in-out';
+    //     testimonialsContainer.style.transform = 'translateX(-100%)'; // Move by 100% of the container width
+    //     setTimeout(() => {
+    //         testimonialsContainer.style.transition = 'none';
+    //         testimonialsContainer.style.transform = 'translateX(0)';
+    //         testimonialsContainer.appendChild(firstTestimonial);
+    //     }, 800);
+    // }, 3000);// Change slide every 3 seconds
 </script>
 
 </body>
