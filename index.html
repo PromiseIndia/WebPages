@@ -44,6 +44,29 @@
             color: rgb(242, 125, 7);
             
         }
+        .disclaimer{
+            font-size: 3rem;
+            font-weight: bolder;
+            padding: 20px;
+            color: crimson;
+        }
+        .btn-primary{
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+
+        }
+        .btn-primary button{
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            color: azure;
+            background-color: blue;
+            justify-items: center;
+            border-radius: 10px;
+        }
 
         #image-container {
             display: flex;
@@ -72,6 +95,10 @@
             text-align: center;
             padding: 20px;
         }
+        #content h1{
+            display: flex;
+            align-items: flex-start;
+        }
         #socials{
             height: 50px;
             width: 50px;
@@ -98,11 +125,13 @@
     display: flex;
     overflow: hidden;
     width: 100%;
+    display: none;
 }
 
 .testimonial {
     /* Existing styles for testimonials */
     flex: 0 0 auto;
+    display: none;
 }
         .testimonial img {
             width: 100px; /* Adjust the width as needed */
@@ -120,6 +149,7 @@
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: black 20px;
+    display: none;
 }
 
 .client-name {
@@ -185,7 +215,7 @@
 
 
 <div class="main">
-    <div class="ram-banner"><img src="./contents/ram.png" alt="Banner"></div>
+    <!-- <div class="ram-banner"><img src="./contents/ram.png" alt="Banner"></div> -->
     <div id="slider">
 
         <div id="image-container">
@@ -197,6 +227,9 @@
             <div class="slide"><img src="https://picsum.photos/id/1024/1600/900" alt="Image 6"></div>
         </div>
     </div>
+    <div class="btn-primary"><button>Download Promise App</button></div>
+    <div class="disclaimer">Disclaimer Warning: Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </div>
+
     
     <div id="content">
         <h1>Main Heading As Per Requirement</h1>
@@ -248,25 +281,25 @@
         Itaque quibusdam, hic voluptatem accusantium possimus cupiditate voluptatum est! Consectetur dolores magni atque officiis nam cupiditate maxime facere cum. Eaque iusto blanditiis alias eveniet rem incidunt? Expedita atque autem consequatur.
         Quidem quam illo dolor iusto quos aliquam asperiores porro accusantium. Minus quam, velit eos iure nesciunt facilis asperiores cupiditate vel quis? Culpa at enim minus, eveniet quod mollitia velit quis!</p>
     </div>
-    <div><h1 style="display: flex ;  justify-content: center;">Testimonials</h1></div>
+    <div><h1 style="display: flex ;  justify-content: center; display: none;">Testimonials</h1></div>
     <div id="testimonials">
         
 
         <div class="testimonial">
             <img src="./contents/ram.png" alt="Client 1">
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur congue augue nec leo vestibulum."</p>
-            <p class="client-name">John Doe</p>
+            <p class="client-name"> ~ John Doe</p>
         </div>
         <div class="testimonial">
             <img src="./contents/ram.png" alt="Client 1">
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur congue augue nec leo vestibulum."</p>
-            <p class="client-name">John Starc</p>
+            <p class="client-name"> ~ John Starc</p>
         </div>
 
         <div class="testimonial">
             <img src="./contents/ram.png" alt="Client 2">
             <p>"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer rutrum ante eu lacus."</p>
-            <p class="client-name">Jane Smith</p>
+            <p class="client-name"> ~ Jane Smith</p>
         </div>
 
         <!-- Add more testimonials with images as needed -->
